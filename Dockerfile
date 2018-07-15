@@ -8,7 +8,7 @@ RUN passwd -d builduser # Delete the buildusers password
 
 RUN printf 'builduser ALL=(ALL) ALL\n' | tee -a /etc/sudoers # Allow the builduser passwordless sudo
 
-RUN pacman -Sy --noconfirm grep git xmlto kmod inetutils bc libelf
+RUN pacman -Sy --noconfirm grep git xmlto kmod inetutils bc libelf patch make
             
 USER builduser
 
